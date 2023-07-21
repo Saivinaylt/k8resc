@@ -1,0 +1,13 @@
+kind: pod 
+apiVersion: v1
+metedata:
+  name: label
+  labels: 
+    name: saivinay
+    age: 25
+    dept: cse
+spec:
+  containers:
+  - name: label
+    image: nginx
+    

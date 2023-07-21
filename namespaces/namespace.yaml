@@ -1,0 +1,4 @@
+kind: Namespace #wt kind of resourde ur creating
+apiVersion: v1
+metadata: 
+  name: roboshop  # name of the namespace
