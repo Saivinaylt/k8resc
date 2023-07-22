@@ -5,7 +5,7 @@ metadata:
   labels:
     name: k8
     language: yamallanguage
-    course: 6weeks.
+    course: 6weeks
   annotations:
     kakisai.vgmail.com: myusergamil
 spec:
