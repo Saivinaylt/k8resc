@@ -3,6 +3,10 @@ apiVersion: v1
 metadata:
   name: nginx
   namespace: roboshop
+  labels:
+    name: k8
+    language: yamallanguage
+    course: 6weeks
 spec:
   containers:
   - image: nginx
