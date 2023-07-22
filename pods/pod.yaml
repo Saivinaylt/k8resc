@@ -5,7 +5,9 @@ metadata:
   labels:
     name: k8
     language: yamallanguage
-    course: 6weeks
+    course: 6weeks.
+  Annotations:
+   kakisai.v@gmail.com: myusergamil
 spec:
   containers:
   - image: nginx
