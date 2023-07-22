@@ -7,7 +7,7 @@ metadata:
     language: yamallanguage
     course: 6weeks.
   annotations:
-   kakisai.v@gmail.com: myusergamil
+    kakisai.v@gmail.com: myusergamil
 spec:
   containers:
   - image: nginx
