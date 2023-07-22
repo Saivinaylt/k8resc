@@ -1,17 +1,17 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nginx
+  name: label
   labels:
     name: k8
     language: yamallanguage
     course: 6weeks.
   annotations:
-    kakisai.v@gmail.com: myusergamil
+    kakisai.vgmail.com: myusergamil
 spec:
   containers:
   - image: nginx
-    name: nginx
+    name: label
     ports:
     - containerPort: 80
 
