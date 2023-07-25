@@ -1,8 +1,9 @@
 apiVersion: v1
-kind: CongigMap
+kind: ConfigMap
 metadata:
-  name: config-map
+  name: config-test
 data:
   CART_HOST: cart
-  MYSQL_HOST: mysql
   USER_HOST: user
+  MYSQL_HOST: mysql.joindevops.com
+  MYSQL_SCHEMA: cities
