@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: label
+  name: resource
   labels:
     name: k8
     language: yamallanguage
@@ -12,8 +12,6 @@ spec:
   containers:
   - image: nginx
     name: label
-    ports:
-    - containerPort: 80
     resources:
       # soft limit, when a container is created it will get these resources
       requests:
