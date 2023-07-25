@@ -2,10 +2,13 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: podconfig
+  labels:
+    name: confimapenvvariavles
 spec:
   containers:
   - image: nginx
     name: podconfig
     envFrom:
     - configMapRef:
-        name: config-test
+        name: config-test 
+
