@@ -1,0 +1,8 @@
+kind: CongigMap
+apiVersion: v1
+metadata:
+  name: config-map
+data:
+  CART_HOST: cart
+  MYSQL_HOST: mysql
+  USER_HOST: user
