@@ -1,5 +1,5 @@
-kind: CongigMap
 apiVersion: v1
+kind: CongigMap
 metadata:
   name: config-map
 data:
