@@ -14,15 +14,9 @@ spec:
     name: label
     ports:
     - containerPort: 80
-    resources :
-      requests: 
-        cpu: "0.2"
-        memory: "128mi"
-      limits: 
-        cpu: "0.3"
-        memory: "150mi"
+   
 
-
+     
 
 
 
