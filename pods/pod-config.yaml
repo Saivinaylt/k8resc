@@ -4,7 +4,7 @@ metadata:
   name: podconfig
 spec:
   containers:
-  - image:nginx
+  - image: nginx
     name: podconfig
     envFrom:
     - configMapRef:
