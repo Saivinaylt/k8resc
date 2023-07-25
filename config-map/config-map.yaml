@@ -7,3 +7,13 @@ data:
   USER_HOST: user
   MYSQL_HOST: mysql.joindevops.com
   MYSQL_SCHEMA: cities
+
+
+# apiVersion: v1
+# kind: CongigMap
+# metadata:
+#   name: config-map
+# data:
+#   CART_HOST: cart
+#   MYSQL_HOST: mysql
+#   USER_HOST: user
