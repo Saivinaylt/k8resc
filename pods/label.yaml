@@ -2,6 +2,7 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: labelpod
+  namespace: roboshop
   labels:
     name: saivinay
     dept: cse
