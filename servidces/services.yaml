@@ -1,10 +1,7 @@
-apiVersion: v1
 kind: service
+apiVersion: v1
 metadata:
   name: podservices
-  labels:
-    env: dev
-    resourcetype: Service
 spec:
   selector:
     dept: cse
