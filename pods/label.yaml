@@ -1,6 +1,6 @@
 kind: Pod
 apiVersion: v1
-meradata:
+metadata:
   name: labelpod
   labels:
     name: saivinay
