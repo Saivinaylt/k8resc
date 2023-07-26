@@ -1,13 +1,12 @@
-kind: pod 
+kind: Pod
 apiVersion: v1
-metedata:
-  name: label
-  labels: 
+meradata:
+  name: labelpod
+  labels:
     name: saivinay
-    age: 25
     dept: cse
+    year: twenty
 spec:
   containers:
-  - name: label
+  - name: nginx
     image: nginx
-    
