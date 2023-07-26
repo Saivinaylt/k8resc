@@ -1,7 +1,8 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: podservices
+  name: nginx-service
+  namespace: default
 spec:
   selector:
     dept: cse
