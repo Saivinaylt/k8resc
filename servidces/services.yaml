@@ -3,28 +3,27 @@ kind: Service
 metadata:
   name: nginx-service
   namespace: default
+  labels:
+    name: nginx-service
+    environment: DEV
 spec:
   selector:
+  # you should provide pod labels here
     dept: cse
   ports:
-  - name: http
-    protocol: tcp
+  - name: http-port
+    protocol: TCP
+    # service port
     port: 80
-    target: 80
-
+    # pod port
+    targetPort: 80
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: debug-pod
-  labels:
-    name: saivinay
-    dept: cse
-    year: twenty
 spec:
   containers:
-  - name: almalinux
+  - name: debug-pod
     image: "almalinux:8"
-    command: ["sleep" , "20000"]
-
-
+    command: ["sleep", "20000"]
