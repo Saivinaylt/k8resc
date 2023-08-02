@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: stable-perl
+        image: nginx
