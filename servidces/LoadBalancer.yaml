@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: default
+  labels:
+    name: nginx-service
+    environment: DEV
+spec:
+  type: LoadBalancer
+  selector:
+  # you should provide pod labels here
+    name: saivinay
+    dept: cse
+    year: twenty
+  ports:
+  - name: http-port
+    protocol: TCP
+    # service port
+    port: 80
+    # pod port
+    targetPort: 80
+
+---
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx
+  labels:
+    name: saivinay
+    dept: cse
+    year: twenty
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+
+
+
+
+
+    
+   

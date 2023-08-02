@@ -2,8 +2,6 @@ kind: Pod
 apiVersion: v1
 metadata:
   name: podconfig
-  labels:
-    name: confimapenvvariavles
 spec:
   containers:
   - image: nginx
