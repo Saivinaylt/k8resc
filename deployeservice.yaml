@@ -1,0 +1,39 @@
+apiversion: apps/vq
+kind: Deployement
+metadata:
+  name: mongodb-deployement
+  lables:
+    name: mongodb-deploy
+    couse: kubetentes
+    duration: twomonths
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mongodb
+      project: roboshop
+  template:
+    metadata:
+      labels:
+        name: mongodb
+        project: roboshop
+    spec:
+      containers:
+      - image: mongodb
+        name: mongodb
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: mongodb-service
+spec:
+  selector:
+    name: mongodb
+    project: roboshop
+  Ports:
+
+
+
+
+
+

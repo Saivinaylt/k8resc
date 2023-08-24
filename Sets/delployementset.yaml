@@ -19,3 +19,23 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:  
+  name: mongdb-service
+spec:
+  selector:
+    app: nginx
+   ports:
+  - name: http
+    protocol: tcp
+    port: 80
+    target: 80
+---
+  
+
+
+
+
+
