@@ -55,11 +55,11 @@ spec:
               mountPath: /usr/share/filebeat/filebeat.yml
               subPath: filebeat.yml 
       volumes:
-        # mouted emoty dir to both the conatiners nginx and filebeat sidecar to share the volume between the pods.
+        # mouted empty dir to both the conatiners nginx and filebeat sidecar to share the volume between the pods.
         - name: nginx-logs
         - name: filebeat-config
           configMap:
             name: filebeat-configmap
             items:
               - key: filebeat.yml
-                path: filebeat.yml
+                path: filebeat.yml  
