@@ -36,7 +36,14 @@ spec:
     name: nginx
     ports:
     - containerPort: 80
----
+    volumeMounts:
+    - mountPath: "/usr/share/nginx/html"
+      name: html
+  volumes:
+  - name: html
+    persistentVolumeClaim:
+      claimName: ebs-static-pvc
+--- 
 apiVersion: v1
 kind: Service
 metadata:
