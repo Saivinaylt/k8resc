@@ -1,0 +1,9 @@
+# storage class it will createss the disk and pv backgrounf u no need to request to admin to create storgae pv and disk
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs-dynamic-sc
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: gp2
