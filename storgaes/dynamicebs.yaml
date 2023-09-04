@@ -1,4 +1,3 @@
-# storage class it will createss the disk and pv backgrounf u no need to request to admin to create storgae pv and disk
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
@@ -11,7 +10,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-static-pvc
+  name: efs-static-pvc
 spec:
   accessModes:
     - ReadWriteOnce
@@ -19,3 +18,42 @@ spec:
     requests:
       storage: 30Gi
   storageClassName: "ebs-dynamic-sc"
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx
+  labels:
+    purpose: ebs-static
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: "/usr/share/nginx/html"
+      name: html
+  volumes:
+    - name: html
+      persistentVolumeClaim:
+        claimName: efs-static-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    name: nginx
+spec:
+  type: LoadBalancer
+  selector:
+  # you should provide pod labels here
+    purpose: ebs-static
+  ports:
+  - name: http-port
+    protocol: TCP
+    # service port
+    port: 80
+    # pod port
+    targetPort: 80
