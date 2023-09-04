@@ -11,7 +11,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: efs-static-pvc
+  name: ebs-static-pvc
 spec:
   accessModes:
     - ReadWriteOnce
