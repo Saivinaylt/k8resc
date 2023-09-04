@@ -10,7 +10,7 @@ parameters:
   directoryPerms: "700"
   gidRangeStart: "1000" # optional
   gidRangeEnd: "2000" # optional
-  basePath: "/saivinay" # optional
+  basePath: "/saivinaydynamic" # optional
 # ---
 # apiVersion: v1
 # kind: PersistentVolumeClaim
