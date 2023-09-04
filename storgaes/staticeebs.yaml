@@ -21,7 +21,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 20Gi
+      storage: 25Gi
   storageClassName: ""
 ---
 kind: Pod
@@ -36,13 +36,6 @@ spec:
     name: nginx
     ports:
     - containerPort: 80
-    volumeMounts:
-    - name: html
-      mountPath: "/usr/share/nginx/html"    
-  volumes:
-    - name: html
-      persistentVolumeClaim:
-        claimName: ebs-static-pvc-testing
 # --- 
 # apiVersion: v1
 # kind: Service
