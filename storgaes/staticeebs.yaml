@@ -4,7 +4,7 @@ metadata:
   name: ebs-statisc-testing
 spec:
   capacity:
-    storage: 20Gi
+    storage: 25Gi
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
