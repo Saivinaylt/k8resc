@@ -10,7 +10,7 @@ parameters:
   directoryPerms: "700"
   gidRangeStart: "1000" # optional
   gidRangeEnd: "2000" # optional
-  basePath: "/roboshop" # optional
+  basePath: "/saivinay" # optional
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
