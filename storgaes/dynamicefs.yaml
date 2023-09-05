@@ -6,7 +6,7 @@ metadata:
 provisioner: efs.csi.aws.com
 parameters:
   provisioningMode: efs-ap
-  fileSystemId: fs-0103ad7f6280f8e1e
+  fileSystemId: fs-0e72af9f360cd15cc
   directoryPerms: "700"
   gidRangeStart: "1000" # optional
   gidRangeEnd: "2000" # optional
