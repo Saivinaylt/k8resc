@@ -4,7 +4,7 @@ metadata:
   name: ebs-statisc-testing
 spec:
   capacity:
-    storage: 35Gi
+    storage: 18Gi
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
@@ -21,7 +21,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 35Gi
+      storage: 18Gi
   storageClassName: ""
 ---
 kind: Pod
