@@ -11,18 +11,18 @@ parameters:
   gidRangeStart: "1000" # optional
   gidRangeEnd: "2000" # optional
   basePath: "/roboshop" # optional
-# ---
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-#   name: efs-dynamic-pvc
-# spec:
-#   accessModes:
-#     - ReadWriteOnce
-#   resources:
-#     requests:
-#       storage: 50Gi
-#   storageClassName: "efs-dynamic-sc"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-dynamic-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+  storageClassName: "efs-dynamic-sc"
 # ---
 # kind: Pod
 # apiVersion: v1
