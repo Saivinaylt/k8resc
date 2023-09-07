@@ -44,7 +44,7 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "" # menction ur storage class name
+      storageClassName: "ebs-dynamic-sc" # menction ur storage class name
       resources:
         requests:
           storage: 1Gi
