@@ -16,29 +16,26 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:stable-perl
         ports:
         - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: podservices
+  name: nginx-service
+  namespace: default
   labels:
-    env: dev
-    resourcetype: Service
+    name: nginx-service
+    environment: DEV
 spec:
   selector:
+  # you should provide pod labels here
     app: nginx
   ports:
-  - name: http
-    protocol: tcp
+  - name: http-port
+    protocol: TCP
+    # service port
     port: 80
-    target: 80
-
-  
-
-
-
-
-
+    # pod port
+    targetPort: 80
