@@ -27,12 +27,12 @@ metadata:
 spec:
   selector:
     app: nginx
-   ports:
+  ports:
   - name: http
     protocol: tcp
     port: 80
     target: 80
----
+
   
 
 
