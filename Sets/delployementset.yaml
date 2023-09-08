@@ -22,8 +22,11 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata:  
-  name: mongdb-service
+metadata:
+  name: podservices
+  labels:
+    env: dev
+    resourcetype: Service
 spec:
   selector:
     app: nginx
